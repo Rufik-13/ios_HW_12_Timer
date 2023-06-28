@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     let timerLabel: UILabel = {
         let label = UILabel()
+        label.text = "00:25"
         label.font = UIFont.systemFont(ofSize: 35)
         label.textAlignment = .center
         label.textColor = .black
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .gray
         setupUI()
         startPauseButton.addTarget(self, action: #selector(startPauseButtonTapped), for: .touchUpInside)
         
